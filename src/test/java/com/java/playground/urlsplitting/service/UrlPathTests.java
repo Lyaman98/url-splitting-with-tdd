@@ -6,14 +6,7 @@ import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UrlPathTests {
-
-    UrlSplittingService urlSplittingService;
-
-    @Before
-    public void setup() {
-        urlSplittingService = new UrlSplittingService();
-    }
+public class UrlPathTests extends BaseClassTest{
 
     @Test
     public void pathShouldBeNotNull() {

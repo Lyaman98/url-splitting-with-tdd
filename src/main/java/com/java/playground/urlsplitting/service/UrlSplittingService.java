@@ -1,6 +1,7 @@
 package com.java.playground.urlsplitting.service;
 
 import com.java.playground.urlsplitting.dto.UrlDTO;
+import com.java.playground.urlsplitting.exception.InvalidUrlException;
 
 public class UrlSplittingService {
 
@@ -11,6 +12,10 @@ public class UrlSplittingService {
         urlDTO.setDomain(getDomain(url));
         urlDTO.setPath(getPath(url));
         urlDTO.setProtocol(getProtocol(url));
+
+        if (urlDTO.getDomain().isEmpty()) {
+            throw new InvalidUrlException("Url is invalid");
+        }
 
         return urlDTO;
     }

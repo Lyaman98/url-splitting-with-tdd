@@ -7,14 +7,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UrlProtocolTests {
-
-    UrlSplittingService urlSplittingService;
-
-    @Before
-    public void setup() {
-        urlSplittingService = new UrlSplittingService();
-    }
+public class UrlProtocolTests extends BaseClassTest{
 
     @Test
     public void protocolShouldBeNotNull() {
